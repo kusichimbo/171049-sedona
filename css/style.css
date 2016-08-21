@@ -1,3 +1,10 @@
+html,
+body {
+  background-color: rgb(108, 108, 108);
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "PT Sans";
   font-weight: normal;
@@ -5,6 +12,175 @@ body {
   line-height: 26px;
   color: rgb(51, 51, 51);
   
+  margin: 0 auto;
+  max-width: 1280px;
+  background-color: rgb(242, 242, 242);
+/*  background: url("../img/sedona-index-1200.png") no-repeat;*/
+}
+
+.container {
+  width: 1200px;
+  background-color: rgb(255, 255, 255);
+  margin: 0 auto;  
+  text-align: center;
+}
+
+header {
+  min-height: 56px;
+  position: relative;
+}
+
+.nav-left,
+.nav-right {
+  width: 240px;
+  padding: 15px 0;
+}
+
+.nav-left,
+.text-2,
+.photo-2 {
+  float: left;
+}
+
+.nav-right,
+.photo-1,
+.text-6 {
+  float: right;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.main-logo {
+  position: absolute;
+  left: 531px;  
+}
+
+.header-photo {
+  width: 1200px;
+  height: 724px;
+  background-size: cover;
+  background: url("../img/header-background.jpg") no-repeat; 
+}
+
+.header-photo img {
+  width: 458px;
+  height: 352px;
+  margin-right: auto;
+  margin-bottom: 110px;
+  padding-top: 76px;
+}
+
+.photo-features {
+  width: 1200px;
+  height: 256px;
+}
+
+.photo-1,
+.photo-2 {
+  width: 800px;
+  height: 256px;
+}
+
+.text-2 {
+  width: 400px;
+  min-height: 206px;
+  padding-top: 50px;
+  background-color: rgb(129, 179, 210);
+}
+
+.suggestions,
+.other-features,
+.main-footer {
+  font-size: 0px;
+}
+
+.suggestions div {
+  background-color: rgb(255, 255, 255);
+}
+
+.other-features div {
+  background-color: rgb(238, 238, 238);
+}
+
+.text-3,
+.text-4 {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 26px;
+  width: 400px;
+  min-height: 273px;
+  vertical-align: top;
+  padding-top: 56px;
+}
+
+.text-4 {
+  min-height: 200px;
+}
+
+.hook {
+  width: 1200px;
+  min-height: 205px;
+}
+
+.hook h1 {
+  margin-top: 0px;
+  padding-top: 60px;
+  margin-bottom: 25px; 
+}
+
+.hook p {
+  white-space: pre;
+  margin: 0 auto;
+}
+
+form {
+  width: 572px;
+  margin: 0 auto;
+}
+
+div .search {
+  width: 572px;
+  height: 85px;
+  background-color: rgb(118, 99, 87);
+  margin-top: 1px;
+}
+
+div .hidden,
+div .find {
+  display: none;
+  width: 572px;
+  height: 99px; 
+}
+
+.search-form img {
+  width: 1200px;
+  height: 594px;
+}
+
+.main-footer {
+  margin-top: -128px;
+}
+
+.main-footer section {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 26px;
+  width: 400px;
+  min-height: 70px;
+  vertical-align: top;
+  margin-top: -2px;
+  padding-top: 51px;
+}
+
+.footer-copyright p {
+  display: inline-block;
+  vertical-align:text-bottom;
+  margin-top: 0px;
+  margin-left: 95px;
 }
 
 h1,
