@@ -1,3 +1,11 @@
+html,
+body {
+  background-color: rgb(108, 108, 108);
+  margin: 0;
+  padding: 0;
+  min-width: 1280px;
+}
+
 body {
   font-family: "PT Sans";
   font-weight: normal;
@@ -5,6 +13,176 @@ body {
   line-height: 26px;
   color: rgb(51, 51, 51);
   
+  margin: 0 auto; 
+  max-width: 1280px;
+  background-color: rgb(242, 242, 242);
+/*    background: url("../img/sedona-index-1200.png") no-repeat;*/
+/*    background: url("../img/sedona-hotels-1200.jpg") no-repeat;*/
+}
+
+.container {
+  width: 1200px;
+  background-color: rgb(255, 255, 255);
+  margin: 0 auto;  
+  text-align: center;
+}
+
+header {
+  min-height: 56px;
+  position: relative;
+}
+
+.nav-left,
+.nav-right {
+  width: 240px;
+  padding: 15px 0;
+}
+
+.nav-left,
+.text-2,
+.photo-2 {
+  float: left;
+}
+
+.nav-right,
+.photo-1 {
+  float: right;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.main-logo {
+  position: absolute;
+  left: 531px;  
+}
+
+.footer-copyright p {
+  display: inline-block;
+  vertical-align: text-bottom;
+  margin-top: 0px;
+  margin-left: 15px;
+}
+
+/*только для index.html*/
+
+.header-photo {
+  width: 1200px;
+  height: 724px;
+  background-size: cover;
+  background: url("../img/header-background.jpg") no-repeat; 
+}
+
+.header-photo img {
+  width: 458px;
+  height: 352px;
+  margin-right: auto;
+  margin-bottom: 110px;
+  padding-top: 76px;
+}
+
+.photo-features {
+  width: 1200px;
+  height: 256px;
+}
+
+.photo-1,
+.photo-2 {
+  width: 800px;
+  height: 256px;
+}
+
+.text-2 {
+  width: 400px;
+  min-height: 206px;
+  padding-top: 50px;
+  background-color: rgb(129, 179, 210);
+}
+
+.suggestions,
+.other-features {
+  font-size: 0px;
+}
+
+.suggestions div {
+  background-color: rgb(255, 255, 255);
+}
+
+.other-features div {
+  background-color: rgb(238, 238, 238);
+}
+
+.text-3,
+.text-4 {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 26px;
+  width: 400px;
+  min-height: 273px;
+  vertical-align: top;
+  padding-top: 56px;
+}
+
+.text-4 {
+  min-height: 200px;
+}
+
+.hook {
+  width: 1200px;
+  min-height: 205px;
+}
+
+.hook h1 {
+  margin-top: 0px;
+  padding-top: 60px;
+  margin-bottom: 25px; 
+}
+
+.hook p {
+  white-space: pre;
+  margin: 0 auto;
+}
+
+.index {
+  width: 572px;
+  margin: 0 auto;
+}
+
+div .search {
+  width: 572px;
+  height: 85px;
+  background-color: rgb(118, 99, 87);
+  margin-top: 1px;
+}
+
+div .hidden,
+div .find {
+  display: none;
+  width: 572px;
+  height: 99px; 
+}
+
+.search-form img {
+  width: 1200px;
+  height: 594px;
+}
+
+.main-footer {
+  margin-top: -130px;
+  font-size: 0px;
+}
+
+.main-footer section {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 26px;
+  width: 400px;
+  min-height: 72px;
+  vertical-align: top;
+  padding-top: 44px;
 }
 
 h1,
@@ -18,3 +196,101 @@ h1 {
   font-size: 30px;
   line-height: 24px;
 }
+
+/*только для inner.html*/
+
+.filters {
+  width: 1200px;
+  min-height: 217px;
+  background-size: 1200px auto;
+  background: url("../img/background-inner.jpg") no-repeat 0 16%; 
+}
+
+fieldset {
+  border-style: none;
+}
+
+.left {
+  float: left;
+  margin: 25px 0 0 60px;  
+  text-align: left;
+  width: 172px;
+  min-height: 155px;
+}
+
+.right {
+  float: right;
+  margin: 25px 45px 0 0;  
+  text-align: left;
+  width: 350px;
+  min-height: 95px;
+}
+
+input.btn {
+  float: right;
+  margin: 15px 167px 0 100px;  
+  text-align: center;
+  width: 138px;
+  min-height: 35px;
+}
+
+.sorter {
+  width: 1128px;
+  min-height: 56px;
+  text-align: left;
+  padding: 30px 0 0 72px;
+  border-bottom: 1px solid rgb(242, 242, 242);
+}
+
+article {
+  width: 1128px;
+  min-height: 120px;
+  text-align: left;
+  padding: 30px 0 0 72px;
+  border-bottom: 1px solid rgb(242, 242, 242);
+
+}
+
+.photo,
+.offer {
+  float: left;
+  margin-right: 30px;
+}
+
+.rating {
+  float: right;
+  margin-right: 70px;
+  width: 100px; /*  откорректировать ширину после подключения шрифта*/
+}
+
+.photo {
+  width: 135px;
+  height: 90px;
+}
+
+.offer {
+  width: 150px; /*  откорректировать ширину после подключения шрифта*/
+}
+
+.inner-footer {
+  margin-top: -3px;
+  font-size: 0px;
+}
+
+.inner-footer section {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 26px;
+  width: 400px;
+  min-height: 70px;
+  vertical-align: top;
+  padding-top: 41px;
+}
+
+
+
+
+
+
+
+
