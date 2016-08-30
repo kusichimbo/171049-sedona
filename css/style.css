@@ -12,12 +12,11 @@ body {
   text-transform: uppercase;
   font-size: 14px;
   line-height: 26px;
-  color: rgb(51, 51, 51);
-  
+  color: rgb(51, 51, 51);  
   margin: 0 auto; 
   max-width: 1280px;
   background-color: rgb(242, 242, 242);
-/* background: url("../img/sedona-index-1200.png") no-repeat;*/
+/*  background: url("../img/sedona-index-1200.png") no-repeat;*/
 /* background: url("../img/sedona-hotels-1200.jpg") no-repeat;*/
 } 
 
@@ -244,66 +243,6 @@ header {
   background-position: -10px -153px;
 }
 
-.sprite {
-    background-image: url("../img/sprite.png");
-    background-repeat: no-repeat;
-    display: block;
-}
-
-.sprite-calendar {
-    width: 21px;
-    height: 22px;
-    background-position: -196px -10px;
-}
-
-.sprite-calendar-down {
-    width: 21px;
-    height: 22px;
-    background-position: -10px -52px;
-}
-
-.sprite-calendar-hvr {
-    width: 21px;
-    height: 22px;
-    background-position: -51px -52px;
-}
-
-.sprite-minus {
-  width: 12px;
-  height: 3px;
-  background-position: -226px -69px;  
-}
-
-.sprite-minus-down {
-    width: 12px;
-    height: 3px;
-    background-position: -258px -69px;
-}
-
-.sprite-minus-hvr {
-    width: 12px;
-    height: 3px;
-    background-position: -290px -69px;
-}
-
-.sprite-plus {
-    width: 11px;
-    height: 11px;
-    background-position: -322px -69px;
-}
-
-.sprite-plus-down {
-    width: 11px;
-    height: 11px;
-    background-position: -353px -69px;
-}
-
-.sprite-plus-hvr {
-    width: 11px;
-    height: 11px;
-    background-position: -245px -100px;
-}
-
 /*только для index.html*/
 
 .header-photo {
@@ -321,6 +260,7 @@ header {
   z-index: 1;
 }
 
+/*
 .header-photo::after {
   position: absolute;
   bottom: 0;
@@ -334,6 +274,7 @@ header {
   -webkit-clip-path: polygon(50% 100%, 20% 100%, 20% 0, 50% 100%, 80% 0, 80% 100%, 50% 100%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
   clip-path: polygon(50% 100%, 20% 100%, 20% 0, 50% 100%, 80% 0, 80% 100%, 50% 100%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
 }
+*/
 
 div .text-1 {
   height: 157px;
@@ -364,7 +305,7 @@ div .text-1 {
 .text-2 {
   width: 400px;
   min-height: 256px;
-    background-color: rgb(129, 179, 210);
+  background-color: rgb(129, 179, 210);
 }
 
 .text-2 h2,
@@ -458,7 +399,7 @@ div .text-1 {
 }
 
 .index {
-  width: 569px;
+  width: 570px;
   margin: 0 auto;
   position: relative;
 }
@@ -480,46 +421,164 @@ div .text-1 {
 .hidden-form {
   position: absolute;
   visibility: hidden;
-  width: 569px;
-  height: 395px;
-/*  background-color: rgba(55, 255, 255, 0.3);*/
+  width: 570px;
+  height: 340px;
+  padding-top: 55px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
 }
 
 .hidden {
-  min-height: 58px;
-  padding-top: 11px;
+  min-height: 40px;
+  margin-bottom: 25px; 
 }
 
-.hidden:first-child {
-  padding-top: 60px; 
+.hidden label,
+.counter label {
+  float: left;
+  display: block;
+  width: 115px;
+  padding: 7px 0 7px 55px;
+  text-align: left;   
 }
 
-.hidden:nth-child(3) {
-  padding-left: 40px; 
+.children label {
+  width: 65px;
+  padding-left: 50px;
 }
 
 .hidden input {
-  width: 345px;
-  height: 35px;
-  margin-left: 15px;
-  margin-top: -10px;
-  background-color: rgba(255, 255, 255, 0);
+  float: left;
+  width: 295px;
+  border: none;
+  outline: none;
+  padding: 7px 0 7px 10px;    
 }
 
-.persons input {
-  width: 115px;
-  margin: -10px 35px;
+.hidden-form  input,
+.hidden-form button {
+  text-transform: uppercase;
+  background-color: rgb(242, 242, 242);
 }
 
-.find {
-  min-height: 115px;
-  padding-top: 25px;
+.hidden-form  input:hover,
+.hidden-form button:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+.hidden-form  input:active,
+.hidden-form button:active {
+  background-color: rgb(255, 255, 255);
+}
+
+button.calendar {
+  float: left;  
+}
+
+.counter {
+  float: left;
+  width: 285px;
+  margin-top: 5px;
+}
+
+.counter button,
+.counter input {
+  float: left;  
+}
+
+.counter input {
+  width: 35px;
+  height: 40px;
+  border: none;
+  outline: none;
+  padding: 0px;  
+  text-align: center;
+}
+
+.counter button,
+button.calendar {
+  position: relative;
+  width: 40px;
+  height: 40px;  
+  border: none;
+  outline: none;  
+  cursor: pointer;
+}
+
+button.calendar::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url("../img/sprite.png") no-repeat;
+  width: 22px;
+  height: 22px;
+  background-position: -196px -10px;
+}
+
+button.calendar:hover::before {  
+   width: 21px;
+   height: 22px;
+   background-position: -51px -52px;
+}
+
+button.calendar:active::before {  
+   width: 21px;
+   height: 22px;
+   background-position: -10px -52px;
+}
+
+.counter button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url("../img/sprite.png") no-repeat;  
+}
+
+.counter button:nth-child(1)::before {
+  width: 12px;
+  height: 3px;
+  background-position: -226px -69px;  
+} 
+
+.counter button:nth-child(1):hover::before {
+  width: 12px;
+  height: 3px;
+  background-position: -290px -69px;
+}
+
+.counter button:nth-child(1):active::before {
+  width: 12px;
+  height: 3px;
+  background-position: -258px -69px;
+}
+
+.counter button:nth-child(3)::before {
+  width: 11px;
+  height: 11px;
+  background-position: -322px -69px;
+}
+
+.counter button:nth-child(3):hover::before {
+  width: 11px;
+  height: 11px;
+  background-position: -245px -100px;
+}
+
+.counter button:nth-child(3):active::before {
+  width: 11px;
+  height: 11px;
+  background-position: -353px -69px;
 }
 
 .find button {
-  width: 455px;
+  width: 458px;
   min-height: 60px;
-  background-color: rgba(129, 179, 210, 0.1);
+  margin: 50px auto;
+  background-color: rgb(129, 179, 210);
 }
 
 .map {
@@ -938,11 +997,13 @@ a.btn {
   text-align: center;
 }
 
-a.btn:hover {
+a.btn:hover,
+.find button:hover {
   background: rgb(102, 158, 192);
 }
 
-a.btn:active {  
+a.btn:active,
+.find button:active {  
   color: rgba(0, 0, 0, 0.3);
   background: rgb(84, 150, 189);
 }

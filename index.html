@@ -96,41 +96,44 @@
             <p>Укажите предполагаемые даты поездки,
             и мы покажем Вам  лучшие предложения гостиниц в Седоне</p>
           </div>
-          <form class="index" action="#" method="get">
+          <div class="index">
             <div class="btn search">
               <a href="js/#">Поиск гостиницы в Седоне</a> 
             </div>
-              <div class="hidden-form">
-                <div class="hidden">
-                  <label for="arrival">Дата заезда:</label>
-                  <input id="arrival" type="text" name="arrival-date" value="24 апреля 2016">
-                  <button type="button" name="calendar"></button>
-                </div>
-
-                <div class="hidden">
-                  <label for="departure">Дата выезда:</label>
-                  <input id="departure" type="text" name="departure-date" value="4 июля 2016">
-                  <button type="button" name="calendar"></button>
-                </div>
-
-                <div class="hidden persons">
-                  <label for="adults">Взрослые:</label>
-                  <button type="button" name="minus"></button>
-                  <input id="adults" type="number" name="adults-counter" min="1" max="20" step="1" value="2">
-                  <button type="button" name="plus"></button>
-
-                  <label for="children">Дети:</label>
-                  <button type="button" name="minus"></button>
-                  <input id="children" type="number" name="children-counter" min="0" max="20" step="1" value="0">
-                  <button type="button" name="plus"></button>
-                </div>
-
-                <div class="btn find">
-                  <button type="submit" value="find" name="find" formtarget="_blank">Найти</button>
-                </div>
-              </div>
-            </form>
             
+            <form class="hidden-form" action="#" method="get">              
+              <div class="hidden arrival">
+                <label for="arrival">Дата заезда:</label>
+                 <input id="arrival" type="text" name="arrival-date" value="24 апреля 2016">
+                 <button class="calendar" type="button" name="calendar"></button>                        
+              </div>                           
+
+              <div class="hidden departure">
+                <label for="departure">Дата выезда:</label>
+                <input id="departure" type="text" name="departure-date" value="4 июля 2016">
+                <button class="calendar" type="button" name="calendar"></button>                        
+              </div>              
+
+              <div class="counter adults">
+                <label for="adults">Взрослые:</label>
+                <div>
+                  <button class="adults" type="button" name="minus"></button>                      <input id="adults" type="text" name="adults-counter" min="1" max="20" step="1" value="2"> <button class="adults" type="button" name="plus"></button>
+                </div>                
+              </div>       
+                   
+              <div class="counter children">
+                <label for="children">Дети:</label>
+                <div>
+                  <button class="children" type="button" name="minus"></button>                     <input id="children" type="text" name="children-counter" min="0" max="20" step="1" value="0">              <button class="children" type="button" name="plus"></button>
+                </div>                
+              </div>
+                                     
+              <div class="btn find">
+               <button type="submit" value="find" name="find" formtarget="_blank">Найти</button>
+             </div>
+            </form>
+          </div>
+                        
           <div class="map nojs-map"></div>    
         </section>
       </main>
