@@ -6,7 +6,18 @@ body {
   min-width: 1280px;
 }
 
-body {
+@font-face {
+    font-family: "PT Sans";
+    font-weight: 400;
+    src: url("../fonts/ptsans.woff2");
+  }
+  @font-face {
+    font-family: "PT Sans";
+    font-weight: 700;
+    src: url("../fonts/ptsansbold.woff2");
+  }
+
+body {  
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -468,7 +479,9 @@ div .text-1 {
 
 .hidden-form  input:active,
 .hidden-form button:active {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);  
+  outline: 2px solid rgb(229, 229, 229);
+  
 }
 
 button.calendar {
