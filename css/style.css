@@ -27,8 +27,6 @@ body {
   margin: 0 auto; 
   max-width: 1280px;
   background-color: rgb(242, 242, 242);
-/*  background: url("../img/sedona-index-1200.png") no-repeat;*/
-/* background: url("../img/sedona-hotels-1200.jpg") no-repeat;*/
 } 
 
 .container {
@@ -143,12 +141,6 @@ header {
 .hashtag a {
   font-size: 21px;  
 }
-
-/*
-.hashtag a:hover {
-  color: rgb(102, 150, 192);
-}
-*/
 
 .social-btn {
   display: inline-block;
@@ -1084,7 +1076,7 @@ a.buy:active {
 }
 
 .stars-2 {
-  font-size: 8px; /*  решить с шириной надписи*/
+  font-size: 14px; 
   width: 45px;  
 }
 
