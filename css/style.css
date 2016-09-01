@@ -58,6 +58,11 @@ p {
   color: rgb(51, 51, 51);
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container a {
   color: rgb(0, 0, 0);
   text-decoration: none;
@@ -259,7 +264,7 @@ header {
 .header-photo {
   position: relative;
   width: 1200px;
-  height: 510px;
+  height: 512px;
   background: #b4d2e5 url("../img/header-background.jpg") no-repeat;
   background-size: cover;
 }
@@ -412,7 +417,7 @@ div .text-1 {
 .index {
   width: 570px;
   margin: 0 auto;
-  position: relative;
+  position: relative;  
 }
 
 .search {
@@ -431,17 +436,23 @@ div .text-1 {
 
 .hidden-form {
   position: absolute;
-  visibility: hidden;
+  z-index: 2;
+  visibility: visible;
   width: 570px;
   height: 340px;
   padding-top: 55px;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);  
+}
+
+.evident {
+  visibility: hidden;
 }
 
 .hidden {
   min-height: 40px;
-  margin-bottom: 25px; 
+  margin-bottom: 25px;
+  animation: bounce 0.9s;
 }
 
 .hidden label,
@@ -450,7 +461,7 @@ div .text-1 {
   display: block;
   width: 115px;
   padding: 7px 0 7px 55px;
-  text-align: left;   
+  text-align: left;
 }
 
 .children label {
@@ -467,21 +478,26 @@ div .text-1 {
 }
 
 .hidden-form  input,
-.hidden-form button {
+.hidden-form button,
+.evident  input,
+.evident button {
   text-transform: uppercase;
   background-color: rgb(242, 242, 242);
 }
 
 .hidden-form  input:hover,
-.hidden-form button:hover {
+.hidden-form button:hover,
+.evident  input:hover,
+.evident button:hover {
   background-color: rgb(235, 235, 235);
 }
 
 .hidden-form  input:active,
-.hidden-form button:active {
+.hidden-form button:active,
+.evident input:active,
+.evident button:active {
   background-color: rgb(255, 255, 255);  
-  outline: 2px solid rgb(229, 229, 229);
-  
+  outline: 2px solid rgb(229, 229, 229);  
 }
 
 button.calendar {
@@ -492,6 +508,7 @@ button.calendar {
   float: left;
   width: 285px;
   margin-top: 5px;
+  animation: bounce 1.1s;
 }
 
 .counter button,
@@ -516,6 +533,7 @@ button.calendar {
   border: none;
   outline: none;  
   cursor: pointer;
+  animation: bounce 1.2s;
 }
 
 button.calendar::before {
@@ -592,11 +610,13 @@ button.calendar:active::before {
   min-height: 60px;
   margin: 50px auto;
   background-color: rgb(129, 179, 210);
+  animation: bounce 1.3s;
 }
 
 .map {
   width: 1200px;
   height: 590px;
+  z-index: 1;
 }
 
 .nojs-map {
@@ -1095,7 +1115,66 @@ a.buy:active {
   padding-top: 41px;
 }
 
+/*АНИМАЦИЯ*/
 
+/*
+@keyframes stretching {
+  0%   {
+    width: 0px;
+  }
+  50% {
+    width: 600px;
+  }
+  60% {
+    width: 540px;
+  }
+  70% {
+    width: 585px;
+  }
+  80% {
+    width: 555px;
+  }
+  90% {
+    width: 578px;
+  }
+  100% {
+    width: 570px;
+  }
+}
+*/
+
+@keyframes bounce {
+  0%   {
+    transform: translateX(-2000px);
+  }
+  15%  {
+    transform: translateX(215px);
+  }
+  30%  {
+    transform: translateX(230px);
+  }
+  40%  {
+    transform: translateX(225px);
+  }
+  50%  {
+    transform: translateX(210px);
+  }
+  60%  {
+    transform: translateX(180px);
+  }
+  70%  {
+    transform: translateX(-15px);
+  }
+  80%  {
+    transform: translateX(10px);
+  }
+  90%  {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 
 
 
