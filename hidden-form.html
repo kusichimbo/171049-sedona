@@ -98,27 +98,26 @@
           </div>
           <div class="index">
             <div class="btn search">
-              <a href="hidden-form.html#popup" id="popup">Поиск гостиницы в Седоне</a> 
+              <a href="index.html#popup" id="popup">Поиск гостиницы в Седоне</a> 
             </div>
             
-            <form class="hidden-form" action="#" method="get">              
+            <form class="hidden-form evident" action="#" method="get">              
               <div class="hidden arrival">
                 <label for="arrival">Дата заезда:</label>
-                 <input id="arrival" type="text" name="arrival-date" value="24 июня 2016" required>
+                 <input id="arrival" type="text" name="arrival-date" value="24 апреля 2016">
                  <button class="calendar" type="button" name="calendar"></button>                        
               </div>                           
 
               <div class="hidden departure">
                 <label for="departure">Дата выезда:</label>
-                <input id="departure" type="text" name="departure-date" value="4 июля 2016" required>
+                <input id="departure" type="text" name="departure-date" value="4 июля 2016">
                 <button class="calendar" type="button" name="calendar"></button>                        
               </div>              
 
               <div class="counter adults">
                 <label for="adults">Взрослые:</label>
                 <div>
-                  <button class="adults" type="button" name="minus"></button>
-                  <input id="adults" type="text" name="adults-counter" value="2" required>
+                  <button class="adults" type="button" name="minus"></button>     <input id="adults" type="text" name="adults-counter" value="2">
                   <button class="adults" type="button" name="plus"></button>
                 </div>                
               </div>       
@@ -126,9 +125,8 @@
               <div class="counter children">
                 <label for="children">Дети:</label>
                 <div>
-                  <button class="children" type="button" name="minus"></button>
-                  <input id="children" type="text" name="children-counter" value="0">  
-                  <button class="children" type="button" name="plus"></button>
+                  <button class="children" type="button" name="minus"></button>   <input id="children" type="text" name="children-counter" value="0">
+                    <button class="children" type="button" name="plus"></button>
                 </div>                
               </div>
                                      
@@ -137,7 +135,8 @@
              </div>
             </form>
           </div>
-          <div class="map nojs-map" id="yandex-map"></div>    
+                        
+          <div class="map nojs-map"></div>    
         </section>
       </main>
 
@@ -157,9 +156,6 @@
           <a class="logo" target="_blank" href="https://htmlacademy.ru" title="На страницу разработчика"></a>
         </section>
       </footer>
-    </div>   
-    
-    <script src="js/script.js"></script>
-    <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=us1_yJjSn0ltIAV7rtEqBffKdkbYiOSY&amp;width=1199&amp;height=587&amp;id=yandex-map"></script>
+    </div>  
   </body>
 </html>

@@ -6,7 +6,18 @@ body {
   min-width: 1280px;
 }
 
-body {
+@font-face {
+    font-family: "PT Sans";
+    font-weight: 400;
+    src: url("../fonts/ptsans.woff2");
+  }
+  @font-face {
+    font-family: "PT Sans";
+    font-weight: 700;
+    src: url("../fonts/ptsansbold.woff2");
+  }
+
+body {  
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -45,6 +56,11 @@ p {
   font-size: 14px;
   line-height: 26px;
   color: rgb(51, 51, 51);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .container a {
@@ -248,7 +264,7 @@ header {
 .header-photo {
   position: relative;
   width: 1200px;
-  height: 510px;
+  height: 512px;
   background: #b4d2e5 url("../img/header-background.jpg") no-repeat;
   background-size: cover;
 }
@@ -401,7 +417,7 @@ div .text-1 {
 .index {
   width: 570px;
   margin: 0 auto;
-  position: relative;
+  position: relative;  
 }
 
 .search {
@@ -420,6 +436,7 @@ div .text-1 {
 
 .hidden-form {
   position: absolute;
+  z-index: 2;
   visibility: hidden;
   width: 570px;
   height: 340px;
@@ -428,9 +445,15 @@ div .text-1 {
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
 }
 
+.evident {
+  visibility: visible;
+  animation: stretching 0.4s;
+}
+
 .hidden {
   min-height: 40px;
-  margin-bottom: 25px; 
+  margin-bottom: 25px;
+  animation: bounce 0.9s;
 }
 
 .hidden label,
@@ -439,7 +462,7 @@ div .text-1 {
   display: block;
   width: 115px;
   padding: 7px 0 7px 55px;
-  text-align: left;   
+  text-align: left;
 }
 
 .children label {
@@ -456,19 +479,26 @@ div .text-1 {
 }
 
 .hidden-form  input,
-.hidden-form button {
+.hidden-form button,
+.evident  input,
+.evident button {
   text-transform: uppercase;
   background-color: rgb(242, 242, 242);
 }
 
 .hidden-form  input:hover,
-.hidden-form button:hover {
+.hidden-form button:hover,
+.evident  input:hover,
+.evident button:hover {
   background-color: rgb(235, 235, 235);
 }
 
 .hidden-form  input:active,
-.hidden-form button:active {
-  background-color: rgb(255, 255, 255);
+.hidden-form button:active,
+.evident input:active,
+.evident button:active {
+  background-color: rgb(255, 255, 255);  
+  outline: 2px solid rgb(229, 229, 229);  
 }
 
 button.calendar {
@@ -479,6 +509,7 @@ button.calendar {
   float: left;
   width: 285px;
   margin-top: 5px;
+  animation: bounce 1.1s;
 }
 
 .counter button,
@@ -503,6 +534,7 @@ button.calendar {
   border: none;
   outline: none;  
   cursor: pointer;
+  animation: bounce 1.2s;
 }
 
 button.calendar::before {
@@ -579,11 +611,13 @@ button.calendar:active::before {
   min-height: 60px;
   margin: 50px auto;
   background-color: rgb(129, 179, 210);
+  animation: bounce 1.3s;
 }
 
 .map {
   width: 1200px;
   height: 590px;
+  z-index: 1;
 }
 
 .nojs-map {
@@ -1044,6 +1078,9 @@ a.buy:active {
   width: 89px;
   height: 17px;
   background-position: -276px -100px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;  
 }
 
 .stars-2 {
@@ -1082,7 +1119,64 @@ a.buy:active {
   padding-top: 41px;
 }
 
+/*АНИМАЦИЯ*/
 
+@keyframes stretching {
+  0%   {
+    width: 0px;
+  }
+  50% {
+    width: 600px;
+  }
+  60% {
+    width: 540px;
+  }
+  70% {
+    width: 585px;
+  }
+  80% {
+    width: 555px;
+  }
+  90% {
+    width: 578px;
+  }
+  100% {
+    width: 570px;
+  }
+}
+
+@keyframes bounce {
+  0%   {
+    transform: translateY(-200px);
+  }
+  15%  {
+    transform: translateY(215px);
+  }
+  30%  {
+    transform: translateY(230px);
+  }
+  40%  {
+    transform: translateY(225px);
+  }
+  50%  {
+    transform: translateY(210px);
+  }
+  60%  {
+    transform: translateY(180px);
+  }
+  70%  {
+    transform: translateY(-15px);
+  }
+  80%  {
+    transform: translateY(10px);
+  }
+  90%  {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 
 
