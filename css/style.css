@@ -3,15 +3,16 @@ html {
 }
 
 @font-face {
-    font-family: "PT Sans";
-    font-weight: 400;
-    src: url("../fonts/ptsans.woff2");
-  }
-  @font-face {
-    font-family: "PT Sans Bold";
-    font-weight: 700;
-    src: url("../fonts/ptsansbold.woff2");
-  }
+  font-family: "PT Sans";
+  font-weight: 400;
+  src: url("../fonts/ptsans.woff2");
+}
+
+@font-face {
+  font-family: "PT Sans Bold";
+  font-weight: 700;
+  src: url("../fonts/ptsansbold.woff2");
+}
 
 body {  
   font-family: "PT Sans Bold", "Arial", sans-serif;
@@ -49,7 +50,7 @@ h1 {
 }
 
 p {
-  font-family: "PT Sans";
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
@@ -318,20 +319,20 @@ header {
 */
 
 div .text-1 {
-  height: 156px;
+  min-height: 156px;
   margin-top: -1px;
 }
 
 .text-1 h2 {
   width: 450px;
   margin: 57px auto 27px;
-  font-family: "PT Sans Bold";
+  font-family: "PT Sans Bold", "Arial", sans-serif;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
 }
 
-h2 > span {
+.text-1 h2::first-line {
   letter-spacing: 0.02em;
 }
 
@@ -397,12 +398,13 @@ p.wide:nth-child(3)::first-line {
   font-size: 0px;
 }
 
-.suggestions div {
+.suggestions {
   background-color: rgb(255, 255, 255);
 }
 
-.other-features div {
+.other-features {
   background-color: rgb(238, 238, 238);
+  min-height: 200px;
 }
 
 .text-3,
@@ -719,7 +721,7 @@ button.calendar:active::before {
   min-height: 212px;
   background-size: 1200px auto;
   background: #6a91b8 url("../img/background-inner.jpg") no-repeat 0 16%;
-  font-family: "PT Sans Bold";
+  font-family: "PT Sans Bold", "Arial", sans-serif;
   font-size: 16px;
   line-height: 21px;
   padding-top: 5px;
@@ -750,7 +752,7 @@ input[type="checkbox"] + label {
   padding-left: 38px;
   position: relative;
   cursor: pointer;
-  font-family: "PT Sans";
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
@@ -821,7 +823,7 @@ input[type="checkbox"]:checked:disabled + label::after {
   text-align: left;
   width: 350px;
   min-height: 95px;
-  font-family: "PT Sans";
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
@@ -829,7 +831,7 @@ input[type="checkbox"]:checked:disabled + label::after {
 
 .right legend {
   margin-left: 5px;
-  font-family: "PT Sans Bold";
+  font-family: "PT Sans Bold", "Arial", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 21px;
@@ -841,7 +843,7 @@ input[type="checkbox"]:checked:disabled + label::after {
   margin-top: 3px;
   margin-left: 14px;
   margin-bottom: 20px;
-  border: 2px solid #ffffff;
+  border: 2px solid rgb(255, 255, 255);
   border-radius: 2px;
   font-size: 0;
   position: relative;
@@ -869,14 +871,14 @@ input[type="checkbox"]:checked:disabled + label::after {
 
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 90px;
+  min-width: 90px;
   padding-left: 65px;  
 }
 
 .price-controls input {
   width: 65px;
   margin: 0;
-  padding-left: 5px;
+  padding-left: 3px;
   color: inherit;
   font: inherit;
   background: transparent;
@@ -1096,7 +1098,7 @@ article {
 
 .offer > a:first-child {
   display: block;
-  font-family: "PT Sans Bold";
+  font-family: "PT Sans Bold", "Arial", sans-serif;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
